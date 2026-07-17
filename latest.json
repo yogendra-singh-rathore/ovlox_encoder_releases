@@ -1,14 +1,14 @@
 {
-    "version":  "2.3.0",
+    "version":  "2.3.1",
     "releaseDate":  "2026-07-17",
-    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.3.0/OvloxEncoderService-Setup-2.3.0.exe",
-    "sha256":  "c49919826d3aa270bdc2cc712bfd5744702aef6b015f9242a7e28f514f9880ca",
-    "sizeBytes":  62633918,
+    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.3.1/OvloxEncoderService-Setup-2.3.1.exe",
+    "sha256":  "19d8960444bad7af1296ec7178d8ed85b8bc451f4387ff32de69070f611834cc",
+    "sizeBytes":  62678216,
     "mandatory":  false,
     "minVersion":  "0.0.0",
     "notes":  [
-                  "The encoder now checks for updates on its own and offers to install them.",
-                  "A red dot appears on the tray icon whenever an update is waiting.",
-                  "Updates verify their download before installing, and will not interrupt a card that is being written."
+                  "Refreshed installer with Ovlox India branding and clearer wording.",
+                  "Shows the product name and version on the setup screen.",
+                  "Fixes text that displayed incorrectly during setup."
               ]
 }
