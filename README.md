@@ -6,6 +6,17 @@ guest key cards from the Ovlox India Hotel Management System.
 It runs quietly in the system tray on the front-desk PC and lets the HMS in your browser talk to
 the USB card encoder plugged into that PC.
 
+> ### ⚠️ Proprietary software — not open source
+>
+> This software is owned exclusively by **Ovlox India**. All rights reserved.
+>
+> It is published here for the convenience of **authorized Ovlox India customers only**. It is
+> licensed to you for use with the Ovlox India HMS at your authorized property — nothing more.
+> You may **not** redistribute, republish, mirror, resell, modify, or reverse engineer it.
+> Downloading it grants you no ownership and no rights beyond that licence.
+>
+> See [LICENSE.txt](LICENSE.txt) for the full terms. If you do not agree to them, do not download it.
+
 ## Download
 
 ### ➡️ [Download the latest version](https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/latest)
@@ -78,4 +89,8 @@ on this repository.
 ---
 
 This repository hosts **release binaries and version information only**. The Encoder's source code
-is not public. © Ovlox India. See [LICENSE](LICENSE) for the terms covering use of the software.
+is proprietary and is not public.
+
+**© Ovlox India. All rights reserved.** Proprietary software, licensed — not sold — to authorized
+customers only. Redistribution, modification, and reverse engineering are prohibited.
+See [LICENSE.txt](LICENSE.txt).

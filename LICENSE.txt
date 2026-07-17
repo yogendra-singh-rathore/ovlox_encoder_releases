@@ -1,0 +1,83 @@
+OVLOX INDIA - ENCODER
+END USER LICENSE AGREEMENT
+
+Copyright (c) Ovlox India. ALL RIGHTS RESERVED.
+
+THIS IS NOT OPEN-SOURCE SOFTWARE. It is proprietary software owned solely by
+Ovlox India. No right to use, copy, modify, or distribute it is granted except
+by the limited license in Section 1 below. Publication of the installer on this
+page is for the convenience of authorized Ovlox India customers ONLY, and does
+not place the software in the public domain, make it free software, or grant any
+licence to the general public.
+
+0. OWNERSHIP
+   This software, in all its forms and versions, together with its design,
+   structure, source code, algorithms, and the integration protocol between it
+   and the Ovlox India Hotel Management System, belongs exclusively to Ovlox
+   India. It is licensed, never sold. No ownership interest, and no right other
+   than the limited license in Section 1, transfers to you at any time, by any
+   means, including by downloading, installing, paying for, or using it.
+
+1. LIMITED LICENSE
+   Subject to your continuous compliance with this Agreement, Ovlox India grants
+   you a non-exclusive, non-transferable, non-sublicensable, revocable license to
+   install and use this software solely:
+     (a) in conjunction with the Ovlox India Hotel Management System; and
+     (b) at the property/account expressly authorized by Ovlox India; and
+     (c) for the duration of your active Ovlox India subscription.
+   No other right is granted, expressly or by implication.
+
+2. RESTRICTIONS
+   You may NOT:
+     (a) use this software with any hotel-management, property-management, or
+         other system other than the Ovlox India HMS;
+     (b) copy, distribute, redistribute, publish, mirror, host, share, transfer,
+         sublicense, rent, lease, lend, sell, or resell this software, or make it
+         available to any third party, whether or not for charge;
+     (c) modify, adapt, translate, patch, or create derivative works of this
+         software, or alter its behaviour by any means;
+     (d) reverse engineer, decompile, disassemble, deobfuscate, or otherwise
+         attempt to derive the source code, algorithms, keys, or protocols of
+         this software, except to the limited extent applicable law expressly
+         permits notwithstanding this restriction;
+     (e) remove, obscure, or alter any proprietary notice, branding, version
+         information, or licence mechanism;
+     (f) use this software to build, train, or inform a competing product.
+
+3. CONFIDENTIALITY
+   The software's integration protocol, hotel keys, and any credentials issued to
+   you are confidential information of Ovlox India. You must protect them with no
+   less care than your own confidential information and must not disclose them.
+
+4. THIRD-PARTY COMPONENTS
+   This software communicates with third-party card-encoder hardware and cloud
+   services (e.g. TTLock). Use of those components is subject to their own terms.
+
+5. UPDATES
+   Updates supplied through this software's update mechanism, or from this
+   download page, form part of the software and are covered by this Agreement.
+   Ovlox India is under no obligation to provide updates or support.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM
+   EXTENT PERMITTED BY LAW, OVLOX INDIA DISCLAIMS ALL WARRANTIES, EXPRESS OR
+   IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+7. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL OVLOX INDIA BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+   OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE THE
+   SOFTWARE.
+
+8. TERMINATION
+   This license terminates automatically, without notice, if you breach any term,
+   or when your Ovlox India subscription ends. On termination you must stop using
+   the software and remove all copies. Sections 0, 2, 3, 6, 7 survive termination.
+
+9. GOVERNING LAW
+   This Agreement is governed by the laws of India, and the courts at the seat of
+   Ovlox India shall have exclusive jurisdiction.
+
+By downloading, installing, or using this software you agree to these terms. If
+you do not agree, do not download or install it.
+
+Ovlox India
