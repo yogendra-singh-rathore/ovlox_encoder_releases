@@ -103,9 +103,26 @@ $manifest = [ordered]@{
     minVersion  = $MinVersion
     notes       = $Notes
 }
-$manifest | ConvertTo-Json -Depth 4 | Set-Content $manifestPath -Encoding utf8
+# Write UTF-8 WITHOUT a BOM. Set-Content -Encoding utf8 on Windows PowerShell 5.1 always emits a
+# BOM, and .NET's JsonSerializer.Deserialize(string) throws "'' is an invalid start of a value" on
+# one -- i.e. a BOM here silently breaks the update check in every installed client.
+$json = $manifest | ConvertTo-Json -Depth 4
+[System.IO.File]::WriteAllText($manifestPath, $json, (New-Object System.Text.UTF8Encoding($false)))
+
+# Prove it parses and is BOM-free, rather than trusting that it is.
+$bytes = [System.IO.File]::ReadAllBytes($manifestPath)
+if ($bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+    Write-Host "ERROR: latest.json was written with a BOM - clients would fail to parse it." -ForegroundColor Red
+    exit 1
+}
+try { $null = [System.IO.File]::ReadAllText($manifestPath) | ConvertFrom-Json }
+catch {
+    Write-Host "ERROR: latest.json is not valid JSON: $_" -ForegroundColor Red
+    exit 1
+}
+
 Write-Host ""
-Write-Host "Updated latest.json" -ForegroundColor Green
+Write-Host "Updated latest.json (UTF-8, no BOM, parses OK)" -ForegroundColor Green
 
 # --- 6. What the human still has to do --------------------------------------------------------
 # Order matters: the .exe must be downloadable BEFORE latest.json advertises it, or clients that
