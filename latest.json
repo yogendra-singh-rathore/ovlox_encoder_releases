@@ -1,14 +1,14 @@
 {
-    "version":  "2.3.1",
+    "version":  "2.3.2",
     "releaseDate":  "2026-07-17",
-    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.3.1/OvloxEncoderService-Setup-2.3.1.exe",
-    "sha256":  "19d8960444bad7af1296ec7178d8ed85b8bc451f4387ff32de69070f611834cc",
-    "sizeBytes":  62678216,
+    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.3.2/OvloxEncoderService-Setup-2.3.2.exe",
+    "sha256":  "e3495eb3f2937c512397e5cb7796c0b8c4e927d577bafce73901bd45139c642a",
+    "sizeBytes":  62671584,
     "mandatory":  false,
     "minVersion":  "0.0.0",
     "notes":  [
-                  "Refreshed installer with Ovlox India branding and clearer wording.",
-                  "Shows the product name and version on the setup screen.",
-                  "Fixes text that displayed incorrectly during setup."
+                  "Your hotel key can now be set from the tray icon, without re-installing.",
+                  "The encoder now tells you clearly when no hotel key is set, instead of failing silently.",
+                  "Security fix: the installer no longer falls back to a shared default key."
               ]
 }
