@@ -1,0 +1,15 @@
+# This repo publishes RELEASES only - never source, never secrets.
+#
+# Installers are attached to GitHub Releases as assets, NOT committed here.
+# A 62 MB binary per version would bloat the repo forever (git keeps every
+# copy) and GitHub warns above 50 MB / blocks above 100 MB.
+*.exe
+*.msi
+*.zip
+
+# Staging area used by tools/new-release.ps1 when hashing a build.
+staging/
+
+# OS
+Thumbs.db
+.DS_Store

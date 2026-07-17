@@ -1,0 +1,16 @@
+﻿{
+    "version":  "2.2.0",
+    "releaseDate":  "2026-07-17",
+    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.2.0/OvloxEncoderService-Setup-2.2.0.exe",
+    "sha256":  "cc600c4bcfb12aa3ba03864e2bd89dfb56cae980a1b8326535d1458ba4cb895c",
+    "sizeBytes":  62619943,
+    "mandatory":  false,
+    "minVersion":  "0.0.0",
+    "notes":  [
+                  "Runs as a system-tray app instead of a Windows Service.",
+                  "Serves https://localhost with a self-signed certificate trusted at install.",
+                  "Tray now shows whether the card encoder is plugged in.",
+                  "File logging with a compact events.log lifecycle report.",
+                  "Fixes a spurious \"Network Error\" shown after a card was written successfully."
+              ]
+}
