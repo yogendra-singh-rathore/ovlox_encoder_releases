@@ -1,14 +1,12 @@
 {
-    "version":  "2.4.0",
+    "version":  "2.4.1",
     "releaseDate":  "2026-07-18",
-    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.4.0/OvloxEncoderService-Setup-2.4.0.exe",
-    "sha256":  "e167e9f9bb1c0a2a1db01ed5648d45f42f66830dd641d570090dc29bed1b670f",
-    "sizeBytes":  62679241,
+    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.4.1/OvloxEncoderService-Setup-2.4.1.exe",
+    "sha256":  "f5c1b1e37c81e346cb3c74e48cb0c90da9e8776810ebb581e3234d801e70471e",
+    "sizeBytes":  62672246,
     "mandatory":  false,
     "minVersion":  "0.0.0",
     "notes":  [
-                  "The encoder now finds its COM port automatically — no more fixed COM11.",
-                  "New tray option: Set COM port (Automatic, or pick one, with a Test button).",
-                  "Clearer status when the encoder or its port needs attention."
+                  "Lets HMS reach the card encoder when the hotel system is opened from its online web address, not only on this PC."
               ]
 }
