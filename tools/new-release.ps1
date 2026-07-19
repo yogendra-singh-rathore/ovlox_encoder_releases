@@ -110,7 +110,10 @@ $manifest = [ordered]@{
 # Write UTF-8 WITHOUT a BOM. Set-Content -Encoding utf8 on Windows PowerShell 5.1 always emits a
 # BOM, and .NET's JsonSerializer.Deserialize(string) throws "'' is an invalid start of a value" on
 # one -- i.e. a BOM here silently breaks the update check in every installed client.
-$json = $manifest | ConvertTo-Json -Depth 4
+# Force LF line endings. The manifest is SIGNED over its exact bytes; if we wrote CRLF here but git
+# (core.autocrlf) stored LF, the served bytes wouldn't match the signature and every client would
+# reject the update. LF + the .gitattributes "-text" rule keeps signed == committed == served.
+$json = ($manifest | ConvertTo-Json -Depth 4).Replace("`r`n", "`n")
 [System.IO.File]::WriteAllText($manifestPath, $json, (New-Object System.Text.UTF8Encoding($false)))
 
 # Prove it parses and is BOM-free, rather than trusting that it is.

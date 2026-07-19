@@ -1,0 +1,5 @@
+# The update manifest is cryptographically SIGNED over its exact bytes (latest.json.sig). git must
+# NOT touch its line endings (core.autocrlf), or the bytes GitHub serves would differ from the bytes
+# that were signed and every 2.4.2+ client would reject the update. Treat these as binary.
+latest.json      -text
+latest.json.sig  -text
