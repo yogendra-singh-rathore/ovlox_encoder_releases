@@ -1,12 +1,12 @@
 {
-    "version":  "2.4.1",
-    "releaseDate":  "2026-07-18",
-    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.4.1/OvloxEncoderService-Setup-2.4.1.exe",
-    "sha256":  "f5c1b1e37c81e346cb3c74e48cb0c90da9e8776810ebb581e3234d801e70471e",
-    "sizeBytes":  62672246,
+    "version":  "2.4.2",
+    "releaseDate":  "2026-07-19",
+    "url":  "https://github.com/yogendra-singh-rathore/ovlox_encoder_releases/releases/download/v2.4.2/OvloxEncoderService-Setup-2.4.2.exe",
+    "sha256":  "089cd34513237fe887ea8b6cb7698aa1a086d1b24c72bc7e9240650fe97bdcbf",
+    "sizeBytes":  62671906,
     "mandatory":  false,
     "minVersion":  "0.0.0",
     "notes":  [
-                  "Lets HMS reach the card encoder when the hotel system is opened from its online web address, not only on this PC."
+                  "Security hardening: the auto-updater now cryptographically verifies each update before installing it."
               ]
 }
