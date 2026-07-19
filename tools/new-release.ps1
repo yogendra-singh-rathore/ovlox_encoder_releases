@@ -33,7 +33,11 @@ param(
     [string]$MinVersion,
 
     # Folder holding the built installer. Defaults to the sibling private repo.
-    [string]$BuildDir = "$PSScriptRoot\..\..\v2_exe\installer_output"
+    [string]$BuildDir = "$PSScriptRoot\..\..\v2_exe\installer_output",
+
+    # Private signing key (ECDSA P-256 PEM). Kept OUTSIDE the repos, never committed. Encoder 2.4.2+
+    # refuses any manifest whose detached signature doesn't verify against its embedded public key.
+    [string]$KeyPath = "$env:USERPROFILE\.ovlox\encoder-signing-key.pem"
 )
 
 $ErrorActionPreference = 'Stop'
@@ -124,6 +128,24 @@ catch {
 Write-Host ""
 Write-Host "Updated latest.json (UTF-8, no BOM, parses OK)" -ForegroundColor Green
 
+# --- 5b. SIGN the manifest. Clients 2.4.2+ FAIL CLOSED on a missing/invalid signature, so this is
+#         mandatory on every release. Produces latest.json.sig (must be pushed WITH latest.json). ---
+$signTool = Join-Path $PSScriptRoot '..\..\v2_exe\tools\manifest-sign'
+if (-not (Test-Path $KeyPath)) {
+    Write-Host "ERROR: signing key not found at $KeyPath" -ForegroundColor Red
+    Write-Host "  Generate it once (then embed the printed public key in UpdateChecker.ManifestPublicKeyB64 and rebuild):" -ForegroundColor Yellow
+    Write-Host "    dotnet run --project `"$signTool`" -- keygen `"$KeyPath`""
+    exit 1
+}
+Write-Host "Signing latest.json ..." -NoNewline
+& dotnet run --project $signTool --verbosity quiet -- sign $KeyPath $manifestPath
+if ($LASTEXITCODE -ne 0) {
+    Write-Host " FAILED" -ForegroundColor Red
+    Write-Host "ERROR: manifest signing failed - not publishing." -ForegroundColor Red
+    exit 1
+}
+Write-Host " done -> latest.json.sig" -ForegroundColor Green
+
 # --- 6. What the human still has to do --------------------------------------------------------
 # Order matters: the .exe must be downloadable BEFORE latest.json advertises it, or clients that
 # poll in the gap will try to download a URL that 404s.
@@ -140,8 +162,8 @@ Write-Host ""
 Write-Host "  2. Confirm the download URL works (paste it in a browser):"
 Write-Host "       $($manifest.url)" -ForegroundColor Blue
 Write-Host ""
-Write-Host "  3. ONLY THEN publish the manifest, so no client sees a 404:"
-Write-Host "       git -C `"$repoRoot`" add latest.json"
+Write-Host "  3. ONLY THEN publish the manifest + its signature, so no client sees a 404:"
+Write-Host "       git -C `"$repoRoot`" add latest.json latest.json.sig"
 Write-Host "       git -C `"$repoRoot`" commit -m `"Release v$Version`""
 Write-Host "       git -C `"$repoRoot`" push"
 Write-Host ""
